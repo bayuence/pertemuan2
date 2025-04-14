@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Animasi Bola CSS</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #eee;
+    }
+
+    .canvas {
+      position: relative;
+      width: 700px;
+      height: 400px;
+      background-color: green;
+      overflow: hidden;
+    }
+
+    .ball {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 50%;
+      animation: animasiBola 6s linear forwards;
+    }
+
+    @keyframes animasiBola {
+      0% {
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 1;
+      }
+      33% {
+        left: 100%;
+        bottom: 0;
+        transform: translateX(-100%);
+        opacity: 1;
+      }
+      66% {
+        left: 100%;
+        bottom: 50%;
+        transform: translateX(-100%);
+        opacity: 1;
+      }
+      90% {
+        left: 0;
+        bottom: 50%;
+        transform: translateX(0%);
+        opacity: 1;
+      }
+      100% {
+        left: 0;
+        bottom: 50%;
+        transform: translateX(0%);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="canvas">
+    <div class="ball"></div>
+  </div>
+
+</body>
+</html>
